@@ -1,0 +1,42 @@
+.features {
+  @include section(94px, 0px);
+}
+
+.features__list {
+  display: flex;
+}
+
+.features__item {
+  width: 270px;
+  margin-left: 30px;
+
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+}
+
+.features__thumb {
+  width: 270px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.features__icon {
+  display: block;
+}
+
+.features__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--text-color);
+}

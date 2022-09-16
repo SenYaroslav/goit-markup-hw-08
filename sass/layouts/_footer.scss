@@ -1,0 +1,54 @@
+.footer {
+  @include section(60px, 60px);
+  background-color: var(--secondary-background-color);
+
+  &-address {
+    display: block;
+    color: var(--primary-background-color);
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+  }
+
+  &-address:hover,
+  &-address:focus {
+    color: var(--accent-color);
+  }
+
+  &-mail,
+  &-tel {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+  }
+
+  &-mail:hover,
+  &-mail:focus,
+  &-tel:hover,
+  &-tel:focus {
+    color: var(--accent-color);
+  }
+}
+
+.address {
+  width: 231px;
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+
+  & .item:nth-child(-n + 2) {
+    margin-bottom: 9px;
+  }
+}
+
+.aligned {
+  display: flex;
+  align-items: baseline;
+}
