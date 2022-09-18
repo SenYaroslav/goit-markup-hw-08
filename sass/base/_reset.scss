@@ -11,6 +11,8 @@ p {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 input,
@@ -19,8 +21,13 @@ textarea {
   outline: transparent;
 }
 
-.reset {
+.reset, ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
 }

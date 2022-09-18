@@ -9,27 +9,42 @@
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
+  margin-left: 87px;
 
   & .item + .item {
     margin-left: 50px;
   }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .contacts {
-  display: flex;
-  margin-left: auto;
+  display: none;
 
-  & .item + .item {
-    margin-left: 50px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    gap: 30px;
+
+    // & .item + .item {
+    //   margin-left: 50px;
+    // }
   }
 }
 
 .site-nav .link,
 .contacts .contact {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   color: var(--primary-text-color);
 
@@ -44,21 +59,38 @@
   transition-timing-function: var(--transition-timing-function);
 }
 
+.site-nav .link {
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts .contact {
+  font-size: 12px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 .site-nav .link.current {
   position: relative;
   color: var(--accent-color);
-}
 
-.link.current::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
 }
 
 .contacts .contact {
@@ -75,16 +107,24 @@
     width: 16px;
     height: 12px;
     margin-right: 10px;
-    padding: 0;
     fill: currentColor;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 14px;
+      height: 10px;
+    }
   }
 
   & > .icon.smartphone {
     width: 10px;
     height: 16px;
     margin-right: 10px;
-    padding: 0;
     fill: currentColor;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 10px;
+      height: 14px;
+    }
   }
 }
 
