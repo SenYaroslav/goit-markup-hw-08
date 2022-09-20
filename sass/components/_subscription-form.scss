@@ -1,9 +1,23 @@
 .subscription {
-  margin-left: 93px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .subscription-form {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
 }
 
 .subscription .title {
@@ -16,9 +30,9 @@
 }
 
 .subscription-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -34,6 +48,17 @@
 
   &:focus {
     border-color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 450px;
+    margin: 0 60px 20px 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+    // margin-left: auto;
   }
 }
 

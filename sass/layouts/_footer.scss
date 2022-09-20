@@ -1,54 +1,82 @@
 .footer {
-  @include section(60px, 60px);
+  @include section;
   background-color: var(--secondary-background-color);
 
-  &-address {
-    display: block;
-    color: var(--primary-background-color);
-    text-decoration: none;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    transition-property: color;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
+  @media screen and (min-width: 768px) {
   }
 
-  &-address:hover,
-  &-address:focus {
-    color: var(--accent-color);
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
   }
 
-  &-mail,
-  &-tel {
-    display: block;
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
+  .aligned {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 60px;
 
-    transition-property: color;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
-  }
+    @media screen and (min-width: 768px) {
+      align-items: baseline;
+      &:first-child {
+        justify-content: space-around;
+      }
+    }
 
-  &-mail:hover,
-  &-mail:focus,
-  &-tel:hover,
-  &-tel:focus {
-    color: var(--accent-color);
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      align-items: baseline;
+      text-align: left;
+      gap: 0;
+    }
   }
 }
 
 .address {
-  width: 231px;
+  display: block;
+  width: 232px;
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
 
-  & .item:nth-child(-n + 2) {
-    margin-bottom: 9px;
+  color: var(--primary-background-color);
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  & .item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    & .item:not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
 }
 
-.aligned {
-  display: flex;
-  align-items: baseline;
+.footer-mail,
+.footer-tel {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.footer-mail:hover,
+.footer-mail:focus,
+.footer-tel:hover,
+.footer-tel:focus {
+  color: var(--accent-color);
 }

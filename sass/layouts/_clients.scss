@@ -1,17 +1,25 @@
 .clients {
   @include section;
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+  }
 }
 
 .clients-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .clients-list__link {
-  display: block;
-  width: 170px;
-  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 92px;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
@@ -24,6 +32,17 @@
   &:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+    height: 92px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    height: 92px;
+    // padding: 16px 32px;
   }
 }
 

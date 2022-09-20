@@ -14,7 +14,7 @@
   &-title {
     margin: 0 auto;
     margin-bottom: 30px;
-    width: 360px;
+    width: 100%;
 
     color: var(--primary-background-color);
 
@@ -27,6 +27,10 @@
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
+
+    &-title {
+      max-width: 360px;
+    }
   }
 
   @media screen and (min-width: 1200px) {
@@ -34,7 +38,7 @@
     max-width: 1600px;
 
     &-title {
-      width: 696px;
+      max-width: 696px;
       font-size: 44px;
       line-height: 1.36;
     }

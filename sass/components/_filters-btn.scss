@@ -1,14 +1,44 @@
 .filters {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 15px 8px;
 
-  & .item + .item {
-    margin-left: 8px;
-  }
 
   & .button {
     padding: 6px 22px;
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 410px;
+
+    // & .item {
+    //   margin-left: 8px;
+    // }
+  
+    // & .item:first-child {
+    //   margin-bottom: 15px;
+    // }  
+
+    // & .item:nth-child(3n + 1) {
+    //   margin-left: 0;
+    //   // margin-bottom: 15px;
+    // }
+  }
+
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+
+    & .item:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 
@@ -38,3 +68,4 @@
     cursor: pointer;
   }
 }
+
