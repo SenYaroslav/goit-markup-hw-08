@@ -94,6 +94,12 @@
     letter-spacing: 0.02em;
     color: var(--text-color);
   }
+
+  @media screen and (max-width: 436px) {
+    &__item-tel {
+      font-size: 24px;
+    }
+  }
 }
 
 .mobile-socials {

@@ -24,7 +24,6 @@
   }
 }
 
-
 .social-list__icon {
   fill: currentColor;
 }
@@ -49,13 +48,12 @@
 }
 
 .social-list--footer .social-list__link {
-    background-color: rgba(255, 255, 255, 0.1);;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
 
   &:hover,
   &:focus {
-    color: #ffffff;
+    // color: #ffffff;
     background-color: var(--accent-color);
   }
-
-
 }
